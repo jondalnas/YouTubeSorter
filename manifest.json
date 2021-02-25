@@ -1,0 +1,14 @@
+{
+	"name": "YouTube Sorter",
+	"version": "1.0",
+	"description": "Sort YouTube tabs",
+	"permissions": ["declarativeContent", "storage", "tabs"],
+	"background": {
+		"scripts": ["jquery-3.5.1.js", "background.js"],
+		"persistent": false
+	},
+	"page_action": {
+		"default_popup": "popup.html"
+	},
+	"manifest_version": 2
+}
