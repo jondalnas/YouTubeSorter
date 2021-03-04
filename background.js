@@ -1,3 +1,6 @@
+//Clear setart index when chrome launches
+chrome.storage.local.set({startIndex: -1});
+
 chrome.runtime.onInstalled.addListener(function() {
 	chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
 		chrome.declarativeContent.onPageChanged.addRules([{
@@ -8,6 +11,4 @@ chrome.runtime.onInstalled.addListener(function() {
 				actions: [new chrome.declarativeContent.ShowPageAction()]
 		}]);
 	});
-	
-	chrome.storage.local.set({startIndex: -1});
 });
